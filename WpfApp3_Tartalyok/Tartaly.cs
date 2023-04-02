@@ -29,9 +29,10 @@ namespace SajatOsztalyok
             this.c = c;
             this.aktLiter = 0;
         }
+
         //todo 3. feladat (3p) Fejezze be az elkezdett konstruktort! Ez a konstruktor egy 10x10x10 cm3 kocka alakú üres tartályt hoz létre és a paraméterként kapott nevet adja neki.
 
-        public Tartaly(String nev)
+        public Tartaly(string nev)
         {
             this.nev = nev;
             this.a = 10;
@@ -39,6 +40,7 @@ namespace SajatOsztalyok
             this.c = 10;
             this.aktLiter = 0;
         }
+
 
 
         //todo 4.feladat (4p) Fejezze be az elkezdett jellemző(property) készítését.Adja vissza a tartály cm3-ban mért térfogatát.
@@ -49,11 +51,11 @@ namespace SajatOsztalyok
         }
 
         //todo 5.feladat (2x3p) Készítsen visszatérési érték és paraméter nélküli metódusokat DuplazMeretet és TeljesLeengedes néven.Az DuplazMeretet duplázza a tartály térfogatát valamelyik él értékének változtatásával.A TeljesLeengedes pedig kiüríti a tartályt.
-
         public void DuplazMeretet()
         {
             this.a *= 2;
         }
+
 
         public void TeljesLeengedes()
         {
@@ -62,12 +64,14 @@ namespace SajatOsztalyok
 
         //todo 6.feladat (4p) Készítsen Toltottseg néven double típusú tulajdonságot(property). A tulajdonság visszaadja, hogy %-osan milyen szinten van tele a tartály.
 
+
         public double Toltottseg
         {
             get => (this.aktLiter / Terfogat) * 100;
         }
 
         //todo 7.feladat (6p) Készítsen Tolt néven egyparaméteres visszatéréi érték nélküli metódust.A double paraméterben kapott literrel növeli a tartályban lévő mennyiséget.Amennyiben ez a mennyiség nem fér a tartályba, írjon ki hibaüzenetet és ne hajtsa végre a töltést!
+
 
         public void Tolt(double mennyit)
         {

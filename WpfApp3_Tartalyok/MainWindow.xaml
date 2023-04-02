@@ -19,11 +19,11 @@
         
         <StackPanel Grid.Column="1" Grid.Row="1"
                     Orientation="Horizontal" Margin="70 0 0 0 ">
-            <Button Content="Dupla méretre növel" Height="30" Width="120"/> 
-            <Button Content="Kiüríti" Margin="30 0 30 0" Height="30" Width="40" />
+            <Button x:Name="btnDuplaz" Content="Dupla méretre növel" Height="30" Width="120" Click="btnDuplaz_Click"/> 
+            <Button x:Name="btnKiurit" Content="Kiüríti" Margin="30 0 30 0" Height="30" Width="40" />
             <TextBox Height="30" Width="50" Background="LightGreen" Text="1" FontSize="20" Padding="5 0 0 0"/>
             <Label Content="liter" Height="30" Width="40" />
-            <Button Content="Töltés" Height="30" Width="40" />
+            <Button x:Name="btnTolt" Content="Töltés" Height="30" Width="40" Click="btnTolt_Click" />
 
 
         </StackPanel>
@@ -36,22 +36,22 @@
             </Grid.RowDefinitions>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <RadioButton x:Name="rdoTeglatest" GroupName="TestFajta" Content="Téglatest" IsChecked="True"/>
-                <RadioButton x:Name="rdoKocka" GroupName="TestFajta" Content="Kocka"/>
+                <RadioButton x:Name="rdoTeglatest" GroupName="TestFajta" Content="Téglatest" Checked="rdoTeglatest_Checked"/>
+                <RadioButton x:Name="rdoKocka" GroupName="TestFajta" Content="Kocka" Checked="rdoKocka_Checked"/>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Label Content="A él:"/>
-                <TextBox x:Name="txtAel" Width="80" Background="LightSkyBlue"/>
+                <TextBox x:Name="txtAel" Width="70" Background="LightSkyBlue" FontSize="15" VerticalAlignment="Center"/>
                 <Label Content="B él:"/>
-                <TextBox x:Name="txtBel" Width="80" Background="LightSkyBlue"/>
+                <TextBox x:Name="txtBel" Width="70" Background="LightSkyBlue" FontSize="15" VerticalAlignment="Center"/>
                 <Label Content="C él:"/>
-                <TextBox x:Name="txtCel" Width="80" Background="LightSkyBlue"/>
+                <TextBox x:Name="txtCel" Width="70" Background="LightSkyBlue" FontSize="15" VerticalAlignment="Center"/>
             </StackPanel>
 
             <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
                 <Label Content="Test neve:"/>
-                <TextBox x:Name="txtNev" Width="80" Background="LightSkyBlue"/>
+                <TextBox x:Name="txtNev" Width="80" Background="LightSkyBlue" FontSize="15" VerticalAlignment="Center"/>
             </StackPanel>
 
             <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
