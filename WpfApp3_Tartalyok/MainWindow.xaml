@@ -42,7 +42,7 @@
 
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Label Content="A él:"/>
-                <TextBox x:Name="txtAel" Width="70" Background="LightSkyBlue" FontSize="15" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtAel" Width="70" Background="LightSkyBlue" FontSize="15" VerticalAlignment="Center" MouseLeave="txtAel_MouseLeave" TextChanged="txtAel_TextChanged"/>
                 <Label Content="B él:"/>
                 <TextBox x:Name="txtBel" Width="70" Background="LightSkyBlue" FontSize="15" VerticalAlignment="Center"/>
                 <Label Content="C él:"/>
