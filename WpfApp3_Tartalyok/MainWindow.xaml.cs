@@ -47,12 +47,12 @@ namespace WpfApp3_Tartalyok
         {
             if (SzamEllenorzes())
             {
-            Tartaly tartaly = new Tartaly(txtNev.Text, Convert.ToInt16(aEl), Convert.ToInt16(bEl), Convert.ToInt16(cEl));
-            test = rdoTeglatest.IsChecked == true ? "Téglatest" : "Kocka";
-            string felvettSor = $"{test}: {tartaly.Terfogat * 1000} cm3 = ({tartaly.Terfogat} liter), töltöttsége: {tartaly.Toltottseg}, méretei: {txtAel.Text} x {txtBel.Text} x {txtCel.Text}";
-            lbTartalyok.Items.Add(felvettSor);
+                Tartaly tartaly = new Tartaly(txtNev.Text, Convert.ToInt16(aEl), Convert.ToInt16(bEl), Convert.ToInt16(cEl));
+                test = rdoTeglatest.IsChecked == true ? "Téglatest" : "Kocka";
+                string felvettSor = $"{test}: {tartaly.Terfogat * 1000} cm3 = ({tartaly.Terfogat} liter), töltöttsége: {tartaly.Toltottseg}, méretei: {txtAel.Text} x {txtBel.Text} x {txtCel.Text}";
+                lbTartalyok.Items.Add(felvettSor);
             }
-            
+
 
         }
 
@@ -156,10 +156,10 @@ namespace WpfApp3_Tartalyok
                 return false;
             }
 
-            
+
         }
 
-        private void MilyenTest ()
+        private void MilyenTest()
         {
             if (test == "Kocka")
             {
