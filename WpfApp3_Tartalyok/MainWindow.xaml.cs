@@ -25,6 +25,7 @@ namespace WpfApp3_Tartalyok
         public MainWindow()
         {
             InitializeComponent();
+            Tartaly tartaly = new Tartaly();
             rdoTeglatest.IsChecked= true;
 
         }
