@@ -5,6 +5,7 @@ using System.Reflection.Metadata;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 
 namespace SajatOsztalyok
 {
@@ -103,7 +104,6 @@ namespace SajatOsztalyok
                 , this.aktLiter
                 );
             */
-
         }
     }
 }

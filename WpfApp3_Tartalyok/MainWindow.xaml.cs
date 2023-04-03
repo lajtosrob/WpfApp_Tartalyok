@@ -36,23 +36,37 @@ namespace WpfApp3_Tartalyok
 
         private void btnRogzit_Click(object sender, RoutedEventArgs e)
         {
-            string sor = $"{txtNev.Text};{txtAel.Text};{txtBel.Text};{txtCel.Text}";
-            StreamWriter sw = new StreamWriter(fajlNev, true);
-            sw.WriteLine(sor);
-            sw.Close();
-            MessageBox.Show($"A {test} rögzítve lett a fájlban.");
+            Tartaly tartaly1 = new Tartaly(txtNev.Text, Convert.ToInt16(aEl), Convert.ToInt16(bEl), Convert.ToInt16(cEl));
+            if (txtNev.Text.Length == 0)
+            {
+                MessageBox.Show("Nem adta meg a test nevét!");
+                return;
+            }
+            else if (SzamEllenorzes())
+            {
+                string sor = $"{txtNev.Text};{txtAel.Text};{txtBel.Text};{txtCel.Text};{tartaly1.Toltottseg / 100 * tartaly1.Terfogat}";
+                StreamWriter sw = new StreamWriter(fajlNev, true);
+                sw.WriteLine(sor);
+                sw.Close();
+                MessageBox.Show($"A {test} rögzítve lett a fájlban.");
+                return;
+            }
+
+
         }
 
         private void btnFelvesz_Click_1(object sender, RoutedEventArgs e)
         {
+            if (txtNev.Text.Length == 0)
+            {
+                MessageBox.Show("Nem adta meg a test nevét!");
+            }
             if (SzamEllenorzes())
             {
-            Tartaly tartaly = new Tartaly(txtNev.Text, Convert.ToInt16(aEl), Convert.ToInt16(bEl), Convert.ToInt16(cEl));
-            test = rdoTeglatest.IsChecked == true ? "Téglatest" : "Kocka";
-            string felvettSor = $"{test}: {tartaly.Terfogat * 1000} cm3 = ({tartaly.Terfogat} liter), töltöttsége: {tartaly.Toltottseg}, méretei: {txtAel.Text} x {txtBel.Text} x {txtCel.Text}";
-            lbTartalyok.Items.Add(felvettSor);
+                Tartaly tartaly = new Tartaly(txtNev.Text, Convert.ToInt16(aEl), Convert.ToInt16(bEl), Convert.ToInt16(cEl));
+                string felvettSor = $"{txtNev.Text}: {tartaly.Terfogat * 1000} cm3 = ({tartaly.Terfogat} liter), töltöttsége: {tartaly.Toltottseg}, méretei: {txtAel.Text} x {txtBel.Text} x {txtCel.Text}";
+                lbTartalyok.Items.Add(felvettSor);
             }
-            
 
         }
 
@@ -156,10 +170,10 @@ namespace WpfApp3_Tartalyok
                 return false;
             }
 
-            
+
         }
 
-        private void MilyenTest ()
+        private void MilyenTest()
         {
             if (test == "Kocka")
             {
