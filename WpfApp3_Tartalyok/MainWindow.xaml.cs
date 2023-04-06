@@ -64,9 +64,11 @@ namespace WpfApp3_Tartalyok
             if (SzamEllenorzes())
             {
                 Tartaly tartaly = new Tartaly(txtNev.Text, Convert.ToInt16(aEl), Convert.ToInt16(bEl), Convert.ToInt16(cEl));
-                string felvettSor = $"{txtNev.Text}: {tartaly.Terfogat * 1000} cm3 = ({tartaly.Terfogat} liter), töltöttsége: {tartaly.Toltottseg}, méretei: {txtAel.Text} x {txtBel.Text} x {txtCel.Text}";
+                test = rdoTeglatest.IsChecked == true ? "Téglatest" : "Kocka";
+                string felvettSor = $"{test}: {tartaly.Terfogat * 1000} cm3 = ({tartaly.Terfogat} liter), töltöttsége: {tartaly.Toltottseg}, méretei: {txtAel.Text} x {txtBel.Text} x {txtCel.Text}";
                 lbTartalyok.Items.Add(felvettSor);
             }
+
 
         }
 
