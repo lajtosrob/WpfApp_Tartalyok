@@ -70,6 +70,12 @@ namespace SajatOsztalyok
             get => (this.aktLiter / Terfogat) * 100;
         }
 
+        public string Nev { get => nev; set => nev = value; }
+        public int A { get => a; set => a = value; }
+        public int B { get => b; set => b = value; }
+        public int C { get => c; set => c = value; }
+        public double AktLiter { get => aktLiter; set => aktLiter = value; }
+
         //todo 7.feladat (6p) Készítsen Tolt néven egyparaméteres visszatéréi érték nélküli metódust.A double paraméterben kapott literrel növeli a tartályban lévő mennyiséget.Amennyiben ez a mennyiség nem fér a tartályba, írjon ki hibaüzenetet és ne hajtsa végre a töltést!
 
 
